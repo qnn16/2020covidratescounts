@@ -1,134 +1,45 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Covid-19 Rates</title>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet">
-    <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
-    <style>
-    h2, h3 {
-        margin: 10px;
-        font-size: 18px;
-    }
-
-    h3 {
-        font-size: 16px;
-    }
-
-    p {
-        margin: 10px;
-    }
-
-    #map {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-    }
-
-    .map-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background: rgba(255, 255, 255, 0.8);
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgba(0, 0, 0, 0.2);
-        margin-left: 20px;
-        font-family: Arial, sans-serif;
-        overflow: auto;
-        border-radius: 3px;
-    }
-
-    #features {
-        top: 0;
-        height: 170px;
-        margin-top: 20px;
-        width: 250px;
-    }
-
-    #legend {
-        padding: 10px;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        line-height: 18px;
-        height: 220px;
-        margin-bottom: 40px;
-        width: 150px;
-    }
-
-    .legend-key {
-        display: inline-block;
-        border-radius: 20%;
-        width: 10px;
-        height: 10px;
-        margin-right: 5px;
-    }
-
-    .mapboxgl-canvas-container.mapboxgl-interactive,
-    .mapboxgl-ctrl-group button.mapboxgl-ctrl-compass {
-        cursor: unset;
-    }
-    </style>
-</head>
-
-<body>
-    <div id="map"></div>
-    <div class='map-overlay' id='features'>
-        <h2>2020 US Covid-19 Rates</h2>
-        <div id='text-description'>
-            <p>This map shows the Covid-19 rates throughout the country in 2020. <br /> <br />
-               Hover over a county! <br /> <br />
-               <a href="https://data.census.gov/cedsci/table?g=0100000US.050000&d=ACS%205-Year%20Estimates%20Data%20Profiles&tid=ACSDP5Y2018.DP05&hidePreview=true">Data</a>
-            </p>
-        </div>
-    </div>
-    <div class='map-overlay' id='legend'></div>
-    <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoicW5uIiwiYSI6ImNsczB0aG1zMTA0YTAycXA1NG0xNWtmbW0ifQ.0ebmaE5q7kqQ0tTSxdhugQ';
-        const   map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/mapbox/streets-v11',
-                center: [-96, 37.5],
-                zoom: 4,
-                bearing: 0,
-                pitch: 0,
-                maxBounds: undefined,
-                renderWorldCopies: true,
-                trackResize: true,
-                attributionControl: true,
-                customAttribution: undefined,
-                logoPosition: 'bottom-left',
-                failIfMajorPerformanceCaveat: false,
-                preserveDrawingBuffer: false,
-                refreshExpiredTiles: true,
-                maxTileCacheSize: null,
-                localIdeographFontFamily: null,
-                transformRequest: null,
-                collectResourceTiming: false,
-                fadeDuration: 300,
-                crossSourceCollisions: true,
-                promoteId: null,
-                render: {
-                    layers: [],
-                    order: 'render'
-                },
-                projection: 'albers',
-                adaptiveProjection: false,
-                theme: 'light',
-                sprite: 'mapbox://sprites/mapbox/streets-v11',
-                glyphs: 'mapbox://fonts/mapbox/{fontstack}/{range}.pbf',
-                localFontFamily: null,
-                light: {
-                    anchor: 'viewport',
-                    color: 'white',
-                    intensity: 0.4,
-                    position: [1.15, 210, 30]
-                }
-                });
+
+        const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-96, 37.5],
+        zoom: 4,
+        bearing: 0,
+        pitch: 0,
+        maxBounds: undefined,
+        renderWorldCopies: true,
+        trackResize: true,
+        attributionControl: true,
+        customAttribution: undefined,
+        logoPosition: 'bottom-left',
+        failIfMajorPerformanceCaveat: false,
+        preserveDrawingBuffer: false,
+        refreshExpiredTiles: true,
+        maxTileCacheSize: null,
+        localIdeographFontFamily: null,
+        transformRequest: null,
+        collectResourceTiming: false,
+        fadeDuration: 300,
+        crossSourceCollisions: true,
+        promoteId: null,
+        render: {
+            layers: [],
+            order: 'render'
+        },
+        projection: 'albers',
+        adaptiveProjection: false,
+        theme: 'light',
+        sprite: 'mapbox://sprites/mapbox/streets-v11',
+        glyphs: 'mapbox://fonts/mapbox/{fontstack}/{range}.pbf',
+        localFontFamily: null,
+        light: {
+            anchor: 'viewport',
+            color: 'white',
+            intensity: 0.4,
+            position: [1.15, 210, 30]
+        }
+        });
 
         async function geojsonFetch() { 
             // other operations
@@ -220,8 +131,3 @@
         }
 
         geojsonFetch();
-    </script>
-
-</body>
-
-</html>
