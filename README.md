@@ -8,8 +8,7 @@ This project showcases how the United States was affected by COVID-19 during 202
 [Choropleth map link](https://qnn16.github.io/2020covidratescounts/map1.html)
 
 ![proportional_symbol](img/covid19-proportionalsymbol.png)
-> Proportional symbol displaying the number of COVID-19 cases per county. Additional information can be found by clicking on each of the proportional symbols.
-<br />
+> Proportional symbol displaying the number of COVID-19 cases per county. Additional information can be found by clicking on each of the proportional symbols. <br />
 [Proportional map symbol link](https://qnn16.github.io/2020covidratescounts/map2.html)
 
 ### Acknowledgements
