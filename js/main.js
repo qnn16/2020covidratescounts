@@ -2,7 +2,7 @@
 
         const map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style: 'mapbox://styles/mapbox/light-v11',
         center: [-96, 37.5],
         zoom: 4,
         bearing: 0,
@@ -30,7 +30,7 @@
         projection: 'albers',
         adaptiveProjection: false,
         theme: 'light',
-        sprite: 'mapbox://sprites/mapbox/streets-v11',
+        sprite: 'mapbox://sprites/mapbox/light-v11',
         glyphs: 'mapbox://fonts/mapbox/{fontstack}/{range}.pbf',
         localFontFamily: null,
         light: {
