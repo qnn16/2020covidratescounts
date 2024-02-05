@@ -12,7 +12,7 @@ This project showcases how the United States was affected by COVID-19 during 202
 [Proportional map symbol link](https://qnn16.github.io/2020covidratescounts/map2.html)
 
 ### Acknowledgements
-![mapshaper files](img/mapshaper.png)
+![mapshaper files](img/mapshaper.png) <br />
 [Mapshaper](https://mapshaper.org/) was used to filter data and convert the shapefile along with various other files into a geoJSON, which was used to create both maps with HTML and CSS. <br />
 [ColorBrewer](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) was also used to select color schemes for the maps in the form hex codes in a JS array. <br />
 The case/death data is from [The New York Times](https://github.com/nytimes/covid-19-data/blob/43d32dde2f87bd4dafbb7d23f5d9e878124018b8/live/us-counties.csv).
